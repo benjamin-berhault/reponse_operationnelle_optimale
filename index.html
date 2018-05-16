@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Mission Critical Technologies 2018</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="custom/bootstrap.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+		</script>
+		<script type="text/javascript" async src="plugin/math/MathJax.js?config=MML_CHTML"></script>
+		<style>
+		
+			@font-face {
+				font-family: Lobster;
+				src: url("css/fonts/Lobster_1.4.otf") format("opentype");
+			}
+
+			.cnam_infos header:after { 
+				content: "Mission Critical Technologies - London 2018"; 
+			}
+
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+				font-family: 'Lobster';
+			}
+			
+			li {
+				display: block; 
+			}
+			
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				text-transform: none;
+			}
+			
+			.reveal section img { 
+				background:none; border:none; box-shadow:none; 
+			}
+			
+			.reveal {
+				font-size: 32px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<header style="position: absolute;bottom: 20px; left: 20px; z-index:500; font-size:14px;"></header>
+			<div class="slides">
+				<section data-state="cnam_infos" data-transition="default">
+					<h2>Vers une réponse opérationnelle optimale</h2>
+					<h3>par la maitrise de notre couverture</h3>
+					<p style="font-size:0.7em; line-height: 50px;">			
+						Benjamin Berhault
+					</p>
+
+<!--					<p>&nbsp;</p> -->
+					
+					<aside class="notes">
+Bonjour à tous, je suis le sergent-chef benjamin berhault, je travaille pour les pompiers de Paris depuis plus de 14 ans. <br>
+<br>
+J'y ai été initialement opérationnel de sapeur à chef de garde et presqu'autant d'années en tant que pompier volontaire dans le 78.
+Par la suite je me suis reconverti dans les métiers de l'informatique et des mathématiques appliquées avec l'obtention d'un diplome d'ingénieur.<br>
+Aujourd'hui sous la coupe du CDT Vigier, je travaille en tant que data programmer analyst. <br>
+<br>
+Je connais donc très bien les problèmes et défis auxquels se confrontent les services d'urgence ayant été moi-même un homme de terrain.
+Et via un cursus universitaire j'ai eu l'opportunité d'approfondir ce que le domaine informatique avait à offrir pour accroitre l'efficacité d'un système de dispatch d'unités de secours. <br>
+<br>
+Parlons donc d'efficacité. <sr>
+<br>
+					</aside>
+				</section>
+				<section data-state="cnam_infos" data-transition="slide-in fade-out">
+					<h3> Efficacité d'un service d'urgence </h3>
+					<span class = "fragment"> Bonne décision au bon moment </span>
+					<!--
+					<ol>
+						<li class="fragment" style="height: 60px;">Right decision at the right moment</li>
+						<li class="fragment" style="height: 60px;">Right team for the right demand</li>
+					</ol>
+					-->
+					<aside class="notes">
+Sur quoi repose l'efficacité d'un service d'urgence? <br> <br>
+<br> <br>
+Comme beaucoup d'autres activités, de la capacité à prendre <font color = "blue"> <b> [next] </b> </font> la bonne décision au bon moment.<br>
+<br>
+Soit pour un système d'allocation des secours, de sa capacité à...<font color="blue"><b>[next]</b></font>
+					</aside>
+				</section>
+				<section data-state="cnam_infos" data-transition="fade-in slide-out">
+					<h3> Efficacité d'un service d'urgence </h3>
+					<span> L'équipe optimale pour une demande de secours </span>
+					<!--
+					<ol>
+						<li class="fragment" style="height: 60px;">Right decision at the right moment</li>
+						<li class="fragment" style="height: 60px;">Right team for the right demand</li>
+					</ol>
+					-->
+					<aside class="notes">
+					...allouer l'équipe la plus adaptée pour une demande donnée.
+					</aside>
+				</section>
+				<section data-state="cnam_infos" data-transition="default">
+
+					<aside class="notes">
+Et avec les milliers d'appels quotidien dont la plupart ne sont pas ce que nous définissons comme étant une urgence, le défi auquel se confronte les services de secours est d'être capable de conserver suffisamment d'unités pour pouvoir répondre aux futures demandes potentiellement critiques. <br>
+<br>
+Mais comment les opérateurs font-ils cela? Comment décident-ils d'envoyer une équipe autre que celle estimée la plus rapide pour se rendre sur les lieux afin de conserver une bonne qualité de service pour de futures demandes ? <br>
+<br>
+Il me semble que tous nos systèmes d'allocations actuels présentent plus ou moins le même manque d'informations pour que les opérateurs puissent réellement réaliser une décision optimale d'allocation. <br> <br>
+Actuellement, un opérateur de salle de traitement d'appels envoie une équipe de secours à l'aide des informations suivantes :
+					</aside>
+				</section>
+				
+				<section data-state="cnam_infos" data-transition="default">
+					<ul>
+						<li class="fragment" style="height: 60px;">Nature de l'urgence </li>
+						<li class="fragment" style="height: 60px;">Emplacement de la demande</li>
+						<li class="fragment" style="height: 60px;">Estimation du temps d'acheminement de l'équipe </li>
+					</ul>
+					<aside class="notes">
+<ul>
+<li> Il évalue la sévérité de la demande et la nécessité d'envoyer ou non une équipe d'urgence <font color = "blue"> <b> [next] </b> </font>, généralement basée sur un arbre d'aide à la décision </li>
+<li> si nécessaire il peut visualiser l'emplacement de la demande sur une carte <font color = "blue"> <b> [next] </b> </font> </li>
+<li> enfin le système lui propose différentes options d'allocation accompagnées de délais estimés d'acheminement des équipes <font color = "blue"> <b> [next] </b> </font> </li>
+</ul>
+Pensez-vous qu'avec ces informations, il soit facile pour les opérateurs de réaliser une bonne décision d'allocation ? Oui ? Non ? <br> <br>
+Voyons ça..
+					</aside>
+					</section>
+					<section data-state="cnam_infos" data-transition="default" height="100%">
+					<video src="videos/difficult_decision.mp4" controls></video>
+						<aside class="notes">
+						<font color="blue"><b>[play]</b></font>
+<I> "Et il y a des décisions très très difficiles à réaliser pour les opérateurs, quel unité je conserve, quel unité envoyer ?
+...vous avez à prendre une décision en une fraction de seconde ... envoyer ne pas envoyer .. c'est difficile </i>
+						</aside>
+					</section>
+					<section data-state="cnam_infos" data-transition="default">
+					<video class="fragment" src="videos/emergency_call.mp4" controls></video>
+									
+						<aside class="notes">
+Donc, en effet, il s'agit d'une décision peu évidente. <br> <br>
+Et pourquoi est-elle difficile ? ... , prenons un exemple ... avec l'appel suivant ... <br>
+<font color = "blue"> <b> [next] </b> </font> Est-ce difficile de choisir d'allouer ou non une équipe ? et de laquelle envoyer ? <font color = "blue"> <b> [play]</b> </font> 
+						</aside>
+					</section>
+				<section data-state="cnam_infos" data-transition="default">
+					<!--<video class="fragment" src="videos/split_second_decision.mp4" controls></video>-->
+
+					<aside class="notes">
+Pour ce cas c'est évident, il suffit d'envoyer la plus rapide à même de se présenter sur les lieux. Le problème est en effet les cas où l'urgence n'est pas avérée et pour lesquels l'envoi d'une équipe peu potentiellement démunir une zone pour de futures demandes réellement critiques<br>
+					<br>
+Là est le problème. <br>
+
+					</aside>
+				</section>	
+				<section data-state="cnam_infos" data-transition="none">
+
+					<aside class="notes">
+
+Les systèmes actuels ne précisent pas aux opérateurs, la conséquence de leur décision d'allocation. Ils ne leur montrent pas la couverture résultante de la population au moment de la décision de dispatch, ils ne leur montrent pas le pourcentage résultant de la population couvert sous le seuil visé de qualité de service.
+<br> <br>
+Voyons donc à quoi pourrait ressembler une partie d'application de dispatch plus pertinente, bénéficiant de la mise en oeuvre des avancées technolgiques de ces dernières années. <br>
+<br>
+<!--
+Pour cela, j'ai réalisé une interface web très basique interagissant avec une application côté serveur calculant les temps de transit, la couverture actuelle (courante) et résultante pour les unités dont les délais de présentation sont les plus courts à l'aide d'une bibliothèque de routage développée à l'Institut de technologie de Karlsruhe d'Allemagne. 
+<br> <br>
+Avec cela voyons à quel point la décision d'allocation devient évidente pour l'opérateur.
+-->
+					</aside>
+				</section>	
+
+				<section data-state="cnam_infos">
+					<section>
+					<img data-src="image/coverage/option01.jpg" class="fragment" width="100%" data-transition="none-in none-out">
+					<aside class="notes">
+Et pour cette démonstration disons que nous sommes sur le point d'envoyer une équipe pour une demande non critique alors que la couverture opérationnelle est en souffrance dû à une forte sollicitation des secours et que par conséquent moins de 30% des unités restent actuellement disponibles. <br>
+<br>
+<font color="blue"><b>[next]</b></font>Cette application a été configurée pour récupérer les 3 premières unités les plus rapides (il ne s'agit bien sûr que d'un paramètre modifiable au besoin).
+<br> 
+Les options d'allocation sont maintenant présentées avec 2 cartes: <br>
+<ul>
+<li> l'une affichant la couverture avant allocation, en haut</li>
+<li> et après allocation pour celle du bas </li>
+</ul>
+Les représentations cartographiques permettent vraiment une appréciation très rapide de la situation du service, <br>
+<br>
+Mais dans certains cas, les choses peuvent ne pas être si évidentes, donc pour cela, chaque option d'allocation est associée à une estimation de la population couverte après dispatch sous le délai de qualité de service visé par le service de secours. <br> <br>
+Même si l'interface aurait certainement pu être plus sexy et plus exhaustive, il me semble que le bénéfice de telles informations dans une application de dispatch devient évident. <br> <br>
+J'espère ne pas être le seul à trouver qu'il ne s'agit là pas d'un gadget mais que cet outil possède un réel intérêt pour l'amélioration de la qualité de service d'un service de secours<br>
+Et ne voyez pas cela comme une fin en soi, mais comme une brique nécessaire et propice à de futures applications bien plus incroyables qui décupleront les capacités des services de secours en termes de maitrise de leur couverture et réactivité. <br>
+					</aside>
+					</section>
+					<section>
+					<img data-src="image/coverage/option02.jpg" width="100%" data-transition="none-in none-out">
+					<aside class="notes">
+Avec les informations données par l'appelant, nous sommes sur le point d'envoyer une équipe pour une demande non critique. <br> <br>
+La demande actuelle est relativement élevée, par conséquent moins de 30% des unités de secours sont actuellement disponibles. <br>
+<br>
+<font color="blue"><b>[next]</b></font>Cette application a été configurée pour récupérer les 3 premières unités les plus rapides (il ne s'agit bien sûr que d'un paramètre modifiable au besoin).
+<br> 
+Les options d'allocation sont maintenant présentées avec 2 cartes: <br>
+<ul>
+<li> l'une affichant la couverture avant allocation, en haut</li>
+<li> et après allocation pour celle du bas </li>
+</ul>
+Les représentations cartographiques permettent vraiment une appréciation très rapide de la situation du service, <br>
+<br>
+Mais dans certains cas, les choses peuvent ne pas être si évidentes, donc pour cela, chaque option d'allocation est associée à une estimation de la population couverte après dispatch sous le délai de qualité de service visé par le service de secours. <br> <br>
+Même si l'interface aurait certainement pu être plus sexy et plus exhaustive, il me semble que le bénéfice de telles informations dans une application de dispatch devient évident. <br> <br>
+J'espère ne pas être le seul à trouver qu'il ne s'agit là pas d'un gadget mais que cet outil possède un réel intérêt pour l'amélioration de la qualité de service d'un service de secours<br>
+Et ne voyez pas cela comme une fin en soi, mais comme une brique nécessaire et propice à de futures applications bien plus incroyables qui décupleront les capacités des services de secours en termes de maitrise de leur couverture et réactivité. <br>
+					</aside>
+					</section>
+					<section>
+					<img data-src="image/coverage/option03.jpg" width="100%" data-transition="none-in none-out">
+					<aside class="notes">
+Avec les informations données par l'appelant, nous sommes sur le point d'envoyer une équipe pour une demande non critique. <br> <br>
+La demande actuelle est relativement élevée, par conséquent moins de 30% des unités de secours sont actuellement disponibles. <br>
+<br>
+<font color="blue"><b>[next]</b></font>Cette application a été configurée pour récupérer les 3 premières unités les plus rapides (il ne s'agit bien sûr que d'un paramètre modifiable au besoin).
+<br> 
+Les options d'allocation sont maintenant présentées avec 2 cartes: <br>
+<ul>
+<li> l'une affichant la couverture avant allocation, en haut</li>
+<li> et après allocation pour celle du bas </li>
+</ul>
+Les représentations cartographiques permettent vraiment une appréciation très rapide de la situation du service, <br>
+<br>
+Mais dans certains cas, les choses peuvent ne pas être si évidentes, donc pour cela, chaque option d'allocation est associée à une estimation de la population couverte après dispatch sous le délai de qualité de service visé par le service de secours. <br> <br>
+Même si l'interface aurait certainement pu être plus sexy et plus exhaustive, il me semble que le bénéfice de telles informations dans une application de dispatch devient évident. <br> <br>
+J'espère ne pas être le seul à trouver qu'il ne s'agit là pas d'un gadget mais que cet outil possède un réel intérêt pour l'amélioration de la qualité de service d'un service de secours<br>
+Et ne voyez pas cela comme une fin en soi, mais comme une brique nécessaire et propice à de futures applications bien plus incroyables qui décupleront les capacités des services de secours en termes de maitrise de leur couverture et réactivité. <br>
+					</aside>
+					</section>
+				</section>	
+
+				<section data-state="cnam_infos" data-transition="none">
+
+					<img class="fragment" src="image/01-minority_report.jpg">
+					<aside class="notes">
+
+Parce qu'après avoir été en mesure d'évaluer plus précisément le transit des unités de secours, la couverture courante et après dispatch. <br> <br>
+
+Eh bien ... Il me semble que tout professionnel responsable, réactif et dévoué de service d'urgence, aura à l'esprit de pousser les possibilités offertes par les systèmes d'informations géographique plus loin avec l'indoor mapping. <br> <br>
+L'exploitation de la cartographie intérieur sera en effet incroyable pour les services d'urgence s'ils y investissent vraiment. Les centres de gestions et de coordination pourraient ne plus rien avoir à envier aux salles de gestions des super productions hollywoodiennes ... <br>
+La révolution de demain pour le contrôle des opérations d'urgence ne sera pas de prédire <font color="blue"><b>[next]</b></font> où un appel d'urgence aura lieu, avec 3 mediums flottant dans une piscine comme dans le film minority report. <br> <br>
+
+
+Non..
+					</aside>
+				</section>	
+
+				<section data-state="cnam_infos" data-transition="none">
+
+					<aside class="notes">
+La prochaine véritable révolution dont nous pourrions bénéficier si nous y investissons réellement serait la mise en oeuvre et l'exploitation des possibilités offertes par l'indoor mapping. <br>
+Les décideurs devraient réellement batailler pour.
+<br> <br>
+Mais commençons par le commencement, un véritable contrôle de notre réseau routier, du dispatch, et de la maitrise de la couverture opérationnelle est une première étape nécessaire à réaliser avant d'aller plus loin. <br> <br>
+
+Beaucoup de bonne chose, chose étonnante sont réalisables, un vrai contrôle et vision pour le gestionnaire de leurs unités est possible, mais pour cela : investissements, personnes qualifiées et beaucoup de travail sont nécessaires. <br> <br>
+
+					</aside>
+				</section>	
+
+				<section data-state="cnam_infos">
+Questions ? <br>
+<br>
+<center><img src="image/mission_critical_technologies.jpg"></center>
+					<aside class="notes">
+
+
+Questions ?
+<!-- https://www.google.com/maps/place/Galeries+Lafayette+Haussmann/@48.8736407,2.3317802,18.75z/data=!3m1!5s0x47e66e3704579fb5:0xb825fcec116a04ac!4m8!1m2!2m1!1sgalerie+lafayette+paris!3m4!1s0x47e66e36f4ac612b:0x4401488836c77c08!8m2!3d48.8739317!4d2.3326152 -->
+
+
+					</aside>
+				</section>	
+		
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({ 
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			// Shows the slide number using default formatting
+			//Reveal.configure({ slideNumber: true });
+
+		</script>
+	</body>
+</html>
